@@ -81,4 +81,5 @@ class GpioLcd(LcdApi):
 
     def impl_move_to(self, cursor_x, cursor_y):
         addr = 0x80 + cursor_x + (0x40 * cursor_y)
+
         self.hal_write_command(addr)
